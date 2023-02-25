@@ -6,7 +6,7 @@ function Dashboard() {
   const [userName, setuserName] = useState("");
   const navigate = useNavigate();
   async function dashboard() {
-    const api_data = await fetch("/dashboard", {
+    const api_data = await fetch("/api/dashboard", {
       method: "POST",
     });
     const data = await api_data.json();
@@ -17,7 +17,7 @@ function Dashboard() {
   }
 
   async function getUserData() {
-    const api_data = await fetch("/user/", {
+    const api_data = await fetch("/api/user/", {
       method: "POST",
     });
     const data = await api_data.json();
